@@ -1,0 +1,200 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <title>快法务</title>
+   <!-- <link rel="stylesheet" href="css/swiper.css">-->
+    <link rel="stylesheet" href="css/index.css">
+    <style>
+        /*浮动+清除浮动*/
+        .fr{float: right} .fl{float: left}
+        .clear:after{content:'';display:block;clear: both}
+        *{
+            padding: 0;
+            margin: 0;
+            border: 0;
+        }
+        a{
+            text-decoration: none;
+            display: block;
+        }
+        img{
+            width: 100%;
+            display: block;
+        }
+        .header img{
+            height:280px;
+        }
+        .bg01{
+            height:60px;
+            background: url(./images/productbg.png) no-repeat center;
+            background-size: cover;
+        }
+        .product{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .product .item{
+            width:49%;
+            position: relative;
+        }
+        .product img{
+            height:280px;
+        }
+
+        .product .item .position{
+            position: absolute;
+            bottom: 0;
+
+            width: 100%;
+            height:30px;
+        }
+        .product .item .position a{
+            width: 46%;
+
+            text-align: center;
+            line-height: 30px;
+            color: #fff;
+            background-color: #0f1a6d;
+            float: left;
+
+
+            font-size: 14px;
+        }
+        .product .item .position a.a2{
+            float: right;
+        }
+
+        .footer{
+            position: fixed;
+            /* bottom:10px;*/
+            bottom:0;
+            z-index: 100;
+            width:100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .footer a{
+            text-decoration: none;
+            display: block;
+            /*  width:30%;*/
+            width:49%;
+            height:50px;
+            line-height: 50px;
+            color:#000;
+            text-align: center;
+            /* background-color: #449881;*/
+            background-color: #fff;
+            /* border-radius: 10px;*/
+
+            font-size: 18px;
+        }
+        .footer .a1{
+            height:49px;
+            line-height: 50px;
+            border-top:1px solid #ccc;
+
+           /*
+            color:#fff;
+            background: url(./images/call.png) no-repeat 24% center ;
+            background-size: contain;
+            background-color: #f95858;*/
+        }
+        .footer .a1 span{
+            color: #f95858;
+        }
+        .footer .a1 b{
+            color: #f95858;
+        }
+        .footer .a2{
+            color:#fff;
+            background-color: #f95858;
+        }
+
+
+        @media screen and (min-width: 640px){
+            body,.footer{
+                width:640px;
+                margin: 0 auto;
+            }
+        }
+        @media screen and (max-width: 540px){
+            .header img{
+                height:200px;
+            }
+            .footer a{
+                font-size: 16px;
+            }
+        }
+
+
+    </style>
+    <script src="js/common/jquery.js"></script>
+    <script src="js/common/swiper.jquery.js"></script>
+
+</head>
+<body class="body">
+   <div class="header">
+       <a href="http://www.kuaifawu.com/index.html"><img src="./images/header.jpg" alt=""></a>
+   </div>
+   <div class="bg01"></div>
+   <div class="product">
+       <div class="item">
+           <img src="./images/banner11.jpg" alt="">
+           <div class="position clear">
+               <a href="http://www.kuaifawu.com/product/item/info/id/1.html">公司注册</a>
+               <a class="a2" href="http://www.kuaifawu.com/product/item/info/id/184.html">注销公司</a>
+           </div>
+       </div>
+       <div class="item">
+           <img src="./images/banner12.jpg" alt="">
+           <div class="position clear">
+                <a href="http://www.kuaifawu.com/product/item/info/id/2.html">小规模200元/月</a>
+                <a class="a2" href="http://www.kuaifawu.com/product/item/info/id/91.html">一般纳税人500元/月</a>
+           </div>
+       </div>
+   </div>
+   <!-- <div class="banner">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide slide1"><img src="./images/banner11.jpg" alt=""></div>
+                <div class="swiper-slide slide2"><img src="./images/banner12.jpg" alt=""></div>
+                <div class="swiper-slide slide3"><img src="./images/banner13.jpg" alt=""></div>
+                <div class="swiper-slide slide4"><img src="./images/banner14.jpg" alt=""></div>
+                <div class="swiper-slide slide5"><img src="./images/banner15.jpg" alt=""></div>
+                <div class="swiper-slide slide6"><img src="./images/banner16.jpg" alt=""></div>
+            </div>
+            &lt;!&ndash; Add Pagination &ndash;&gt;
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>-->
+
+ <!-- <p style="font-size: 16px">版权所有@武汉市森禾源装饰工程有限公司</p>-->
+
+   <div class="footer">
+       <a class="a1" href="weixin://">添加微信 <b>(</b> <span>15727010572</span> <b>)</b></a>
+       <a class="a2" href="tel:15727010572">电话拨打</a>
+   </div>
+
+   <!-- <script>
+        var mySwiper = new Swiper('.swiper-container', {
+            loop : true,
+            speed:600,
+            pagination: '.swiper-pagination',
+            paginationClickable: true
+        });
+        setInterval("mySwiper.slidePrev()", 3000);
+
+
+       /* var $height=$("body.body").height();
+        setTimeout(function(){
+            $(".main").height($height);
+            $("iframe").height($height-150);
+        },7500)*/
+    </script>-->
+
+</body>
+</html>
